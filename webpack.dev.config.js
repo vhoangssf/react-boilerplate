@@ -26,10 +26,16 @@ const config = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
+          options: {
+            presets: ['react']
+          }
         }
       }
     ]
   },
-  devtool: 'inline-source-map'
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist'
+  },
 };
 module.exports = config;
